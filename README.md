@@ -6,22 +6,40 @@ First, you must make sure your system can run Java code.
 ```
 $ git clone https://github.com/wzrwzr23/Software-Testing-Mini-Campaign.git
 ```
-* Go to CompareCSV.java file, change the path line
+* Go to CompareCSV.java file, find the ```main``` method
 ```java
-String path = "E:\\COMPUTER\\term5_software\\Software-Testing-Mini-Campaign\\samples\\";
+public static void main(String[] args) throws IOException {
+        CompareCSV compareCSV = new CompareCSV("sample_file_1", "sample_file_2");
 ```
-to the path of your CSV files location, please make sure the two files are in the same location.
-* Go to the main method
+change  ```sample_file_1``` and ```sample_file_2``` to your CSV files' names, or keep them as I stored them in the ```samples``` folder just for testing case.
+* Use terminal to go to the folder that ```CompareCSV.java``` stores.
+```
+cd app/src/main/java
+```
+* Compile the code
+```
+javac CompareCSV.java
+```
+* After compilation, run
+```
+java CompareCSV
+```
+to start the program.
+* Now you are supposed to see the column name of your CSV files and their corresponding index number, and a line telling you to input the choice of combination. Take ```sample_file_1``` and ```sample_file_2``` as example, you will see
+```
+Customer ID#,Account No.,Currency,Type,Balance
+0. Customer ID#
+1. Account No.
+2. Currency
+3. Type
+Please give the unique combination in terms of column index(e.g. 0,1,2):
+```
+* After providing the index number, you will find the exception csv file ```output.csv``` at ```samples``` folder.
+* You can change the exception file's name by changing the "output" in ```compareCSV``` function
 ```java
-public static void main(String[] args)
+writeOutput("output");
 ```
-and change the parameters of ```compareCSV()``` to your CSV files' names.
-* Now you can run the code and checkout the ```path```specified folder for the output ```exception.csv```! 
-* If you do not want to name the output ```exception.csv```, you can change the line
-```java
-String output="exceptions.csv";
-```
-to output the name you want, but remember to write the suffix as ```.csv```.
+to your desired name.
 ## Use Case Diagram
 ![image.png](https://s2.loli.net/2022/07/11/cm6rhe4KdZobaB5.png)
 
