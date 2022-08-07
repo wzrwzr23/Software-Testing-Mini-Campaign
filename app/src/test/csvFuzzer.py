@@ -71,11 +71,37 @@ class CSVFuzzer:
             #df.append(row, ignore_index=True)
             # pd.concat([df, pd.DataFrame(columns=df.columns)], ignore_index=True)
         # df = pd.DataFrame(columns=df.columns)
-        df.to_csv(f"samples/{self.name}", index=False)
+        df.to_csv(f"java/samples/{self.name}", index=False)
 
 
-csv1 = CSVFuzzer(5, "fuzz1")
+csv1 = CSVFuzzer(5, "fuzz1.csv")
 csv1.main()
 
-csv2 = CSVFuzzer(5, "fuzz2")
+csv2 = CSVFuzzer(5, "fuzz2.csv")
 csv2.main()
+
+csv3 = CSVFuzzer(5, "fuzz3.csv")
+csv3.main()
+
+csv4 = CSVFuzzer(5, "fuzz4.csv")
+csv4.main()
+
+csv5 = CSVFuzzer(5, "fuzz5.csv")
+csv5.main()
+
+csv6 = CSVFuzzer(5, "fuzz6.csv")
+csv6.main()
+
+csv7 = CSVFuzzer(5, "fuzz7.csv")
+csv7.main()
+
+csv8 = CSVFuzzer(5, "fuzz8.csv")
+csv8.main()
+
+csv9 = CSVFuzzer(5, "fuzz9.csv")
+csv9.main()
+
+csv10 = CSVFuzzer(5, "fuzz10.csv")
+csv10.main()
+
+
