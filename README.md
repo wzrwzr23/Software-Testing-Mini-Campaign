@@ -63,9 +63,17 @@ to your desired name.
 
 ## Running Tests Guidelines
 
-Add new configration under Junit module, as shown in the screenshot below.
+### Unit Testing
+
+Add new configration under Junit module for ```CompareCSVunitTest```, as shown in the screenshot below.
 
 [![SqCHrJ.md.png](https://iili.io/SqCHrJ.md.png)](https://freeimage.host/i/SqCHrJ)
+
+### System Testing
+
+Add new configration under Junit module for ```CompareCSVsystemTest```, as shown in the screenshot below.
+
+[![Um7L1s.md.jpg](https://iili.io/Um7L1s.md.jpg)](https://freeimage.host/i/Um7L1s)
 
 ### Fuzzing Testing
 
