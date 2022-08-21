@@ -63,9 +63,41 @@ to your desired name.
 
 ## Running Tests Guidelines
 
-Add new configration under Junit module, as shown in the screenshot below.
+### Unit Testing
+
+Add new configration under Junit module for ```CompareCSVunitTest```, as shown in the screenshot below.
 
 [![SqCHrJ.md.png](https://iili.io/SqCHrJ.md.png)](https://freeimage.host/i/SqCHrJ)
+
+### System Testing
+
+Add new configration under Junit module for ```CompareCSVsystemTest```, as shown in the screenshot below.
+
+[![Um7L1s.md.jpg](https://iili.io/Um7L1s.md.jpg)](https://freeimage.host/i/Um7L1s)
+
+### Fuzzing Testing
+
+```Fuzzer.py``` generates mutated column indexes with given input and index of mutation. For example,
+```python
+result = InputFuzzer("0,1,2", 1)
+result.show()
+```
+will execute flip mutation and give output ```0f1,2```.
+
+```csvFuzzer.py``` generates randomized csv files with given row number and file name for ```FuzzingCompareCSV.java``` to run. For example,
+```python
+csv1 = CSVFuzzer(5, "fuzz1.csv")
+csv1.main()
+csv2 = CSVFuzzer(5, "fuzz2.csv")
+csv2.main()
+```
+Then we can put these two files into ```FuzzingCompareCSV.java``` to compare and check for exceptions.
+```java
+public static void main(String[] args) throws IOException {
+        FuzzingCompareCSV compareCSV = new FuzzingCompareCSV("fuzz1", "fuzz2");
+        compareCSV.compareCSV();
+    }
+```
 
 ## Use Case Diagram
 
