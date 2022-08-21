@@ -315,3 +315,13 @@ A boundary value is an input or output value on the border of an equivalence par
 | ID3          | BOS656613   | USD      | CURRENT | 595290  |
 | ID4          | BOS14824    | INR      | SAVINGS | 772578  |
 | ID14         | BOS976529   | USD      | SAVINGS | 593795  |
+
+### Test on Groupmates
+
+Implemented unit testing, system testing, and fuzz testing on namitha9 and kellieay's program.
+
+Unit testing `CompareCSVunitTest` is implemented by JUnit testing on each of their function.
+
+System testing `CompareCSVsystemTest` is implemented by running through their whole program.
+
+Fuzz testing `csvFuzzer` is implemented by generating random illegal csv inputs, then use the csv files in their original programs.
