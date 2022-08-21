@@ -316,7 +316,7 @@ A boundary value is an input or output value on the border of an equivalence par
 | ID4          | BOS14824    | INR      | SAVINGS | 772578  |
 | ID14         | BOS976529   | USD      | SAVINGS | 593795  |
 
-### Test on Groupmates
+### Test on Groupmates' Programs
 
 Implemented unit testing, system testing, and fuzz testing on namitha9 and kellieay's program.
 
